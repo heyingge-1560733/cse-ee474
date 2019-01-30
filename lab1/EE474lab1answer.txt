@@ -1,0 +1,21 @@
+EE474 Lab1 Question
+Yueyang Cheng & Freddie He
+
+Question 1.  What happened to the blink rate? Why?
+
+When we increase the delay time, the blink rate of the LED decreases.
+When we decrease the delay time, the blink rate of the LED increases.
+
+Question 2. How many bits wide is the default ADC data output in the MK20DX256?
+
+16 bits wide.
+
+Question 3. How many bits do you need for the delay, and how do you calculate the delay?
+
+10 bits. ADC converter convert analog to digital, thus 5V is converted to 1023 and 0V is converted to 0.
+The equation to calculate the delay time is delay time = (analog voltage / 5.0) * 1023(ms).
+
+Question 4. How do you change the sample width (number of bits in the digital output of the ADC)?
+
+We can change the sample width by using code analogReadResolution(value). 
+The code analogReadResolution(value) can extend default 10 bits up to 16 bits. 
